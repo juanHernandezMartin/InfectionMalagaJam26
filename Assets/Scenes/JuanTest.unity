@@ -154,8 +154,8 @@ Camera:
   m_GameObject: {fileID: 228074151}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.05756497, g: 0.11589138, b: 0.20754719, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -205,7 +205,7 @@ Transform:
   m_GameObject: {fileID: 228074151}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -1.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -316,6 +316,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1839518701696949645, guid: aae23d21266c7bd46822b5177f1bb093, type: 3}
+      propertyPath: m_Name
+      value: WorldModel
+      objectReference: {fileID: 0}
     - target: {fileID: 4117638066939182895, guid: aae23d21266c7bd46822b5177f1bb093, type: 3}
       propertyPath: m_Name
       value: World
