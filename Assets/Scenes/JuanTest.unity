@@ -316,14 +316,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1839518701696949645, guid: aae23d21266c7bd46822b5177f1bb093, type: 3}
-      propertyPath: m_Name
-      value: WorldModel
-      objectReference: {fileID: 0}
     - target: {fileID: 4117638066939182895, guid: aae23d21266c7bd46822b5177f1bb093, type: 3}
       propertyPath: m_Name
       value: World
       objectReference: {fileID: 0}
+    - target: {fileID: 6337819216718043807, guid: aae23d21266c7bd46822b5177f1bb093, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7bffc08fa5395514bbc41f566e1d72a3, type: 2}
     - target: {fileID: 7618108920852086490, guid: aae23d21266c7bd46822b5177f1bb093, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
