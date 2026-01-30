@@ -308,6 +308,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1560009887 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6335863531070037829, guid: c8788f6a16b7c4a42b6161abec2c814e, type: 3}
+  m_PrefabInstance: {fileID: 8814463715819110152}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1560009889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560009887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d74a2b13329fe654eaf26d1627e5b7c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HumanMovement
+  rotationSpeed: 30
+  directionChangeInterval: 0.1
+  directionChangeAmount: 15
 --- !u!1 &1898039680
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,6 +432,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4864398461518192760, guid: c8788f6a16b7c4a42b6161abec2c814e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7bffc08fa5395514bbc41f566e1d72a3, type: 2}
     - target: {fileID: 6335863531070037829, guid: c8788f6a16b7c4a42b6161abec2c814e, type: 3}
       propertyPath: m_Name
       value: HumanPrefab
@@ -459,7 +483,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6335863531070037829, guid: c8788f6a16b7c4a42b6161abec2c814e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1560009889}
   m_SourcePrefab: {fileID: 100100000, guid: c8788f6a16b7c4a42b6161abec2c814e, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
