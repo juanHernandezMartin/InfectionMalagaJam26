@@ -42,6 +42,7 @@ public class FactoryScript : MonoBehaviour
             inventory.woodCount-=maskPrice;
             factoryAnimation.StartClickAnimation();
             factoryUI.slider.SetActive(true);
+            factoryUI.background.SetActive(false);
             factoryUI.exangeSign.SetActive(false);
             productionTimer = productionTime;
         }
@@ -56,6 +57,7 @@ public class FactoryScript : MonoBehaviour
             if (productionTimer <= 0)
             {
                 inventory.maskCount++;
+                factoryUI.background.SetActive(true);
                 factoryUI.slider.SetActive(false);
                 factoryUI.exangeSign.SetActive(true);
             }

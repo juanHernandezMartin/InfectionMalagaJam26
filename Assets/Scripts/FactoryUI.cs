@@ -5,6 +5,7 @@ public class FactoryUI : MonoBehaviour
     public GameObject slider;
     public GameObject buildinSign;
     public GameObject exangeSign;
+    public GameObject background;
     
     void Update()
     {
