@@ -55,6 +55,8 @@ public class HumanInfection : MonoBehaviour
     {
         if (other.CompareTag("Human"))
         {
+            if( isMasked )
+                return;
             other.GetComponent<HumanInfection>().Infect();
         }
     }
