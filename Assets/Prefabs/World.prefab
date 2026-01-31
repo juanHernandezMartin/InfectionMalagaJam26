@@ -108,7 +108,7 @@ SphereCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCManager
   humanPrefab: {fileID: 6335863531070037829, guid: c8788f6a16b7c4a42b6161abec2c814e, type: 3}
-  timeToSpawn: 10
+  timeToSpawn: 30
   StartingHumans: 3
   maxHumans: 10
   currentHumans: 0
@@ -332,7 +332,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7618108920852086490}
   - component: {fileID: 5028632731748537492}
-  - component: {fileID: 6442465013319245495}
   m_Layer: 0
   m_Name: World
   m_TagString: Untagged
@@ -377,23 +376,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MoveWorld
   worldSpeed: 50
   mouseSensitivity: 30
---- !u!114 &6442465013319245495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4117638066939182895}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41351ae9f25d13e3fa96c4a6e5d001eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::treeManager
-  treePrefab: {fileID: 0}
-  timeToSpawn: 1
-  startingTrees: 4
-  maxTrees: 20
-  currentTrees: 0
 --- !u!1 &5594047353697758556
 GameObject:
   m_ObjectHideFlags: 0
