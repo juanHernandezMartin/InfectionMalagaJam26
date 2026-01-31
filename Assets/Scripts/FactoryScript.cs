@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class FactoryScript : MonoBehaviour
 {
+    public FactoryAnimation factoryAnimation;
     public InventoryScript inventory;
     private int price = 10;
 
@@ -11,6 +12,7 @@ public class FactoryScript : MonoBehaviour
         {
             inventory.woodCount-=price;
             inventory.maskCount++;
+            factoryAnimation.StartClickAnimation();
         }
     }
 

@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 7209722841959112918}
   - component: {fileID: -6931761087023038760}
   - component: {fileID: 1060448434111445309}
+  - component: {fileID: 3091834054901589963}
   m_Layer: 6
   m_Name: Building
   m_TagString: Obstacle
@@ -147,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5badea2ef298574e9d00d3b808f1e9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FactoryScript
+  factoryAnimation: {fileID: 3091834054901589963}
   inventory: {fileID: 0}
 --- !u!65 &1060448434111445309
 BoxCollider:
@@ -169,6 +171,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.2, y: 0.2, z: 0.2}
   m_Center: {x: 0, y: 0.58, z: 0}
+--- !u!114 &3091834054901589963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6638762127528132293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1020b493b2f477f46bfce118a33478e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FactoryAnimation
+  clickAnimStrength: 0.005
+  modelTransform: {fileID: 1071790147373529721}
 --- !u!1 &7866558991925476514
 GameObject:
   m_ObjectHideFlags: 0
