@@ -53,6 +53,8 @@ public class HumanInfection : MonoBehaviour
 
     public void OnMouseDown()
     {
+        if( npcManager.inventory.maskCount <= 0 )
+            return;
         isMasked = true;
         maskDurationTimer = maskDuration;
         maskObject.SetActive(true);

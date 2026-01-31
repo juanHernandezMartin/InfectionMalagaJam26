@@ -505,6 +505,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1087003310824548604, guid: aae23d21266c7bd46822b5177f1bb093, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1001824419}
     - target: {fileID: 1426943024441667747, guid: aae23d21266c7bd46822b5177f1bb093, type: 3}
       propertyPath: inventory
       value: 
@@ -513,7 +517,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: World
       objectReference: {fileID: 0}
+    - target: {fileID: 5250045500314245412, guid: aae23d21266c7bd46822b5177f1bb093, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1001824419}
     - target: {fileID: 5509628248328153862, guid: aae23d21266c7bd46822b5177f1bb093, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1001824419}
+    - target: {fileID: 7270195352526504311, guid: aae23d21266c7bd46822b5177f1bb093, type: 3}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1001824419}
@@ -570,6 +582,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aae23d21266c7bd46822b5177f1bb093, type: 3}
+--- !u!114 &2057264059 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1678467056793715160, guid: 173bbceb05e881e459b1dab5528bc364, type: 3}
+  m_PrefabInstance: {fileID: 1102105917}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &33546496376603070
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -622,6 +645,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9216758575337203265, guid: bade504232c0ff541a4e922d319873c4, type: 3}
+      propertyPath: maskText
+      value: 
+      objectReference: {fileID: 2057264059}
     - target: {fileID: 9216758575337203265, guid: bade504232c0ff541a4e922d319873c4, type: 3}
       propertyPath: woodText
       value: 
