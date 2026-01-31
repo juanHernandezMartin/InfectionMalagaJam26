@@ -9,7 +9,7 @@ public class FactoryScript : MonoBehaviour
     {
         if (inventory.woodCount >= price)
         {
-            inventory.woodCount-=5;
+            inventory.woodCount-=price;
             inventory.maskCount++;
         }
     }
