@@ -42,9 +42,14 @@ public class treeManager : MonoBehaviour
         if (trees.Count >= maxTrees)
             return ;
             
-        Vector3 initialPosition = new Vector3(0, 0, 0);
+        float radius = 0.4985f;
+        Vector3 randomDirection = Random.onUnitSphere;
+        Vector3 position = randomDirection * radius;
+        
+        // Rotación para que el árbol apunte hacia afuera desde el centro
+        Quaternion rotation = Quaternion.FromToRotation(Vector3.up, randomDirection);
 
-        GameObject newTree = Instantiate(treePrefab, initialPosition, Random.rotation);
+        GameObject newTree = Instantiate(treePrefab, position, rotation);
 
         Tree treeComponent = newTree.GetComponent<Tree>();
 
