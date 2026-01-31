@@ -42,11 +42,12 @@ public class treeManager : MonoBehaviour
         if (trees.Count >= maxTrees)
             return ;
             
-        Vector3 randomPosition = GetRandomPosition();
+        Vector3 initialPosition = new Vector3(0, 0, 0);
 
-        GameObject newTree = Instantiate(treePrefab, randomPosition, Quaternion.identity);
+        GameObject newTree = Instantiate(treePrefab, initialPosition, Random.rotation);
 
         Tree treeComponent = newTree.GetComponent<Tree>();
+
         if (treeComponent == null)
         {
             treeComponent = newTree.AddComponent<Tree>();
@@ -57,13 +58,5 @@ public class treeManager : MonoBehaviour
         trees.Add(newTree);
     }
 
-    Vector3 GetRandomPosition()
-    {
-        float x = Random.Range(-rangeX, rangeX);
-        float z = Random.Range(-rangeZ, rangeZ);
-        float y = 0f;
-
-        return new Vector3(x, y, z);
-    }
 
 }
