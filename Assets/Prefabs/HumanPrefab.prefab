@@ -170,5 +170,5 @@ MonoBehaviour:
   rotationSpeed: 30
   directionChangeInterval: 0.2
   directionChangeAmount: 30
-  raycastDistance: 0.2
+  raycastDistance: 0.1
   raycastOrigin: {fileID: 7836660489009981000}
