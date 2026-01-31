@@ -320,7 +320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::treeManager
   inventory: {fileID: 0}
   treePrefab: {fileID: 8539458627565621529, guid: ba95c8ddb3ce3c04abdd9888bbfb542f, type: 3}
-  timeToSpawn: 5
+  timeToSpawn: 10
   startingTrees: 4
   maxTrees: 10
   currentTrees: 0
@@ -378,7 +378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveWorld
   worldSpeed: 50
-  mouseSensitivity: 30
+  mouseSensitivity: 3
 --- !u!1 &5594047353697758556
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,19 +706,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1071790147373529721, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.25676233
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 1071790147373529721, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.25676244
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 1071790147373529721, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.6588424
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1071790147373529721, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.65884215
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1071790147373529721, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -726,7 +726,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1071790147373529721, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 137.416
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4980208457383863318, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: m_LocalPosition.x
