@@ -338,6 +338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCManager
   npcPrefab: {fileID: 6335863531070037829, guid: c8788f6a16b7c4a42b6161abec2c814e, type: 3}
+  NPCAtStart: 20
 --- !u!4 &1008677005
 Transform:
   m_ObjectHideFlags: 0
@@ -421,6 +422,10 @@ PrefabInstance:
     - target: {fileID: 5028632731748537492, guid: aae23d21266c7bd46822b5177f1bb093, type: 3}
       propertyPath: mouseSensitivity
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5509628248328153862, guid: aae23d21266c7bd46822b5177f1bb093, type: 3}
+      propertyPath: NPCAmount
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6337819216718043807, guid: aae23d21266c7bd46822b5177f1bb093, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
