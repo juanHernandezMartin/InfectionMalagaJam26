@@ -1,47 +1,27 @@
 using System.Collections.Generic;
+//using System.Numerics;
 using UnityEngine;
 
 public class NPCManager : MonoBehaviour
 {
-    public int maxNPCs = 10;
+    private Transform world;
+    
     public GameObject npcPrefab;
 
-    private List<GameObject> NPCs;
-
-    public float rangeX = 20f;
-    public float rangeZ = 20f;
-
-    void Awake()
+    void Start()
     {
-        NPCs = new List<GameObject> ();
-        while (NPCs.Count < maxNPCs)
+        world = this.gameObject.transform;
+        int i = 0;
+        while (i < 10)
             CrearNPC();
-    }
-
-    void Update()
-    {
-
     }
 
     void CrearNPC()
     {
-        if (NPCs.Count >= maxNPCs)
-            return ;
-            
-        Vector3 randomPosition = GetRandomPosition();
+        Vector3 humanPosition = new Vector3(0, 0 ,0);
 
-        GameObject newNPC = Instantiate(npcPrefab, randomPosition, Quaternion.identity);
-
-        NPCs.Add(newNPC);
-    }
-
-    Vector3 GetRandomPosition()
-    {
-        float x = Random.Range(-rangeX, rangeX);
-        float z = Random.Range(-rangeZ, rangeZ);
-        float y = 0f;
-
-        return new Vector3(x, y, z);
+        GameObject newNPC = Instantiate(npcPrefab, humanPosition, Quaternion.identity);
+        Debug.Log($"NPC creado en: {newNPC.transform.position}");
     }
 
 }

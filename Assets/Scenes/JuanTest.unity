@@ -308,6 +308,92 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1008677003
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1008677005}
+  - component: {fileID: 1008677004}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1008677004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008677003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c9051335f2d2f5abdbc738a9470d68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCManager
+  maxNPCs: 10
+  npcPrefab: {fileID: 6335863531070037829, guid: c8788f6a16b7c4a42b6161abec2c814e, type: 3}
+  rangeX: 20
+  rangeZ: 20
+--- !u!4 &1008677005
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008677003}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.31687, y: 0.22181, z: 0.31687}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1270542409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4117638066939182895, guid: aae23d21266c7bd46822b5177f1bb093, type: 3}
+  m_PrefabInstance: {fileID: 2803289851808622449}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1270542410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270542409}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c9051335f2d2f5abdbc738a9470d68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCManager
+  maxNPCs: 1
+  npcPrefab: {fileID: 6335863531070037829, guid: c8788f6a16b7c4a42b6161abec2c814e, type: 3}
+  rangeX: 20
+  rangeZ: 20
+--- !u!114 &1270542411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270542409}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41351ae9f25d13e3fa96c4a6e5d001eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::treeManager
+  maxTrees: 10
+  treePrefab: {fileID: 5842572098044131225, guid: 91b571d75779f025487383fc2e3f27b5, type: 3}
+  generationInterval: 3
+  rangeX: 20
+  rangeZ: 20
 --- !u!1 &1898039680
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,7 +492,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4117638066939182895, guid: aae23d21266c7bd46822b5177f1bb093, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1270542411}
+    - targetCorrespondingSourceObject: {fileID: 4117638066939182895, guid: aae23d21266c7bd46822b5177f1bb093, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1270542410}
   m_SourcePrefab: {fileID: 100100000, guid: aae23d21266c7bd46822b5177f1bb093, type: 3}
 --- !u!1001 &8814463715819110152
 PrefabInstance:
@@ -416,6 +508,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 902298520809883708, guid: c8788f6a16b7c4a42b6161abec2c814e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 902298520809883708, guid: c8788f6a16b7c4a42b6161abec2c814e, type: 3}
       propertyPath: raycastDistance
       value: 0.12
@@ -482,3 +578,4 @@ SceneRoots:
   - {fileID: 2803289851808622449}
   - {fileID: 1898039681}
   - {fileID: 8814463715819110152}
+  - {fileID: 1008677005}
