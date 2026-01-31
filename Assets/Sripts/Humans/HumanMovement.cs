@@ -33,7 +33,7 @@ public class HumanMovement : MonoBehaviour
         if (Physics.Raycast(raycastOrigin.position, raycastOrigin.forward, out hit, raycastDistance))
         {
             // If we hit an obstacle, turn around
-            transform.Rotate(Vector3.up, 180f);
+            transform.Rotate(Vector3.up, 45f);
         }
     }
 }
