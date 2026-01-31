@@ -1224,11 +1224,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FactoryScript
   factoryAnimation: {fileID: 3091834054901589963}
+  factoryUI: {fileID: 3752477187945179090}
   inventory: {fileID: 0}
   factoryModel: {fileID: 401968090633871555}
   factoryParticles: {fileID: 7866558991925476514}
   maskPrice: 5
   buildPrice: 10
+  productionTime: 2
+  productionTimer: 0
+  isProducing: 0
 --- !u!65 &1060448434111445309
 BoxCollider:
   m_ObjectHideFlags: 0

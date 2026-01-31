@@ -772,9 +772,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -75.535
       objectReference: {fileID: 0}
+    - target: {fileID: 5303762674533311799, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5303762674533311799, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6638762127528132293, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: m_Name
       value: Building (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236104475800691302, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236104475800691302, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236104475800691302, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -912,9 +932,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 62.388
       objectReference: {fileID: 0}
+    - target: {fileID: 5303762674533311799, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5303762674533311799, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6638762127528132293, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: m_Name
       value: Building
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236104475800691302, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236104475800691302, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236104475800691302, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -974,9 +1014,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 148.607
       objectReference: {fileID: 0}
+    - target: {fileID: 5303762674533311799, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5303762674533311799, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6638762127528132293, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: m_Name
       value: Building (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236104475800691302, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236104475800691302, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236104475800691302, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
