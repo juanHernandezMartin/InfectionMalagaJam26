@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 902298520809883708}
   - component: {fileID: 2513336162622301465}
   - component: {fileID: 3417128947412063391}
+  - component: {fileID: 1411508562459418854}
   m_Layer: 0
   m_Name: HumanPrefab
   m_TagString: Human
@@ -189,7 +190,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -210,3 +211,30 @@ MonoBehaviour:
   infectedMaterial: {fileID: 2100000, guid: 572ce1eb378232d4e84f561f16247d67, type: 2}
   humanRenderer: {fileID: 4864398461518192760}
   healthDuration: 20
+--- !u!54 &1411508562459418854
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6335863531070037829}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
