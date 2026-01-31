@@ -320,9 +320,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::treeManager
   inventory: {fileID: 0}
   treePrefab: {fileID: 8539458627565621529, guid: ba95c8ddb3ce3c04abdd9888bbfb542f, type: 3}
-  timeToSpawn: 10
+  timeToSpawn: 5
   startingTrees: 4
-  maxTrees: 10
+  maxTrees: 15
   currentTrees: 0
 --- !u!1 &4117638066939182895
 GameObject:
@@ -692,17 +692,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7569509431757156077}
     m_Modifications:
+    - target: {fileID: 401968090633871555, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1071790147373529721, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.009199405
+      value: -0.0119
       objectReference: {fileID: 0}
     - target: {fileID: 1071790147373529721, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5110094
+      value: 0.511
       objectReference: {fileID: 0}
     - target: {fileID: 1071790147373529721, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.015959466
+      value: 0.0185
       objectReference: {fileID: 0}
     - target: {fileID: 1071790147373529721, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: m_LocalRotation.w

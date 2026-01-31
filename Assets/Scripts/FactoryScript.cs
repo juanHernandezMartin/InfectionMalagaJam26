@@ -2,15 +2,35 @@ using UnityEngine;
 
 public class FactoryScript : MonoBehaviour
 {
+    public FactoryAnimation factoryAnimation;
     public InventoryScript inventory;
-    private int price = 10;
+    public GameObject factoryModel;
+    public GameObject factoryParticles;
+    public int maskPrice = 5;
+    public int buildPrice = 10;
+
+    private bool isBuilt = false;
 
     public void OnMouseDown()
     {
-        if (inventory.woodCount >= price)
+        if( !isBuilt )
+        {
+            if (inventory.woodCount >= buildPrice)
+            {
+                inventory.woodCount-=buildPrice;
+                isBuilt = true;
+                factoryModel.SetActive(true);
+                factoryParticles.SetActive(true);
+                factoryAnimation.StartClickAnimation();
+            }
+            return;
+        }
+
+        if (inventory.woodCount >= maskPrice)
         {
             inventory.woodCount-=5;
             inventory.maskCount++;
+            factoryAnimation.StartClickAnimation();
         }
     }
 
