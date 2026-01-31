@@ -5,6 +5,9 @@ public class HumanInfection : MonoBehaviour
     public Material infectedMaterial;
     public Renderer humanRenderer;
     public float maskDuration = 10f;
+
+    [HideInInspector]
+    public NPCManager npcManager;
     public GameObject maskObject;
     
     private bool isInfected = false;
@@ -26,6 +29,7 @@ public class HumanInfection : MonoBehaviour
         if (healthDuration <= 0)
         {
             Destroy(gameObject);
+            npcManager.currentHumans--;
         }
 
         if (isInfected)

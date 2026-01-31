@@ -9,7 +9,8 @@ public class NPCManager : MonoBehaviour
     public int StartingHumans = 3;
     public int maxHumans = 20;
 
-    private int currentHumans = 0;
+    [HideInInspector]
+    public int currentHumans = 0;
 
     void Start()
     {
@@ -27,6 +28,7 @@ public class NPCManager : MonoBehaviour
         Vector3 humanPosition = new Vector3(0, 0 ,0);
         GameObject newNPC = Instantiate(humanPrefab, humanPosition, Random.rotation);
         newNPC.transform.parent = transform;
+        newNPC.GetComponent<HumanInfection>().npcManager = this;
         currentHumans++;
     }
 
