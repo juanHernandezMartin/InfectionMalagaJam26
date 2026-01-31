@@ -5,10 +5,11 @@ using UnityEngine;
 public class NPCManager : MonoBehaviour
 {
     public GameObject npcPrefab;
+    public int NPCAmount = 20;
 
     void Start()
     {
-        for(int i = 0; i < 5; i++)
+        for(int i = 0; i < NPCAmount; i++)
         {
             CrearNPC();
         }
