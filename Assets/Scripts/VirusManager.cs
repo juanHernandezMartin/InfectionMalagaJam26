@@ -3,9 +3,9 @@ using UnityEngine;
 public class VirusManager : MonoBehaviour
 {
     public GameObject virusPrefab;
-    public float timeToSpawn = 1.0f;
+    public float timeToSpawn = 3.0f;
 
-    private int maxVirus = 20;
+    private int maxVirus = 5;
     private int currentVirus = 0;
 
     void Start()
