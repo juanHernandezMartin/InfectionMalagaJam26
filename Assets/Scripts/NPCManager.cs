@@ -21,7 +21,6 @@ public class NPCManager : MonoBehaviour
 
         GameObject newNPC = Instantiate(npcPrefab, humanPosition, Quaternion.identity);
         newNPC.transform.parent = transform;
-        Debug.Log($"NPC creado en: {newNPC.transform.position}");
     }
 
 }

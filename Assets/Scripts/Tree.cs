@@ -9,6 +9,14 @@ public class Tree : MonoBehaviour
     void Start()
     {
         currentResources = maxResources;
+        
+        // Añadir collider si no existe
+        if (GetComponent<Collider>() == null)
+        {
+            CapsuleCollider collider = gameObject.AddComponent<CapsuleCollider>();
+            collider.radius = 0.5f;
+            collider.height = 2f;
+        }
     }
 
     void Update()

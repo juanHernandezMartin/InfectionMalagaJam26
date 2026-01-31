@@ -45,11 +45,10 @@ public class treeManager : MonoBehaviour
         float radius = 0.4985f;
         Vector3 randomDirection = Random.onUnitSphere;
         Vector3 position = randomDirection * radius;
-        
-        // Rotación para que el árbol apunte hacia afuera desde el centro
+
         Quaternion rotation = Quaternion.FromToRotation(Vector3.up, randomDirection);
 
-        GameObject newTree = Instantiate(treePrefab, position, rotation);
+        GameObject newTree = Instantiate(treePrefab, position, rotation, transform);
 
         Tree treeComponent = newTree.GetComponent<Tree>();
 
