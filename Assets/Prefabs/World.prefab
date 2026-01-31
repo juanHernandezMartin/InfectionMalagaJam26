@@ -44,8 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7c9051335f2d2f5abdbc738a9470d68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCManager
-  npcPrefab: {fileID: 6335863531070037829, guid: c8788f6a16b7c4a42b6161abec2c814e, type: 3}
-  NPCAtStart: 20
+  humanPrefab: {fileID: 6335863531070037829, guid: c8788f6a16b7c4a42b6161abec2c814e, type: 3}
+  timeToSpawn: 1
+  StartingHumans: 3
+  maxHumans: 20
 --- !u!1 &1839518701696949645
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,6 +160,54 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &3158579868060253930
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7436837049906417794}
+  - component: {fileID: 1426943024441667747}
+  m_Layer: 0
+  m_Name: Trees
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7436837049906417794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3158579868060253930}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7618108920852086490}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1426943024441667747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3158579868060253930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41351ae9f25d13e3fa96c4a6e5d001eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::treeManager
+  treePrefab: {fileID: 8539458627565621529, guid: ba95c8ddb3ce3c04abdd9888bbfb542f, type: 3}
+  timeToSpawn: 3
+  startingTrees: 4
+  maxTrees: 20
 --- !u!1 &4117638066939182895
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,6 +244,7 @@ Transform:
   - {fileID: 7569509431757156077}
   - {fileID: 735907166664471958}
   - {fileID: 6328420736806965505}
+  - {fileID: 7436837049906417794}
   - {fileID: 4097697339499558861}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -223,11 +274,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41351ae9f25d13e3fa96c4a6e5d001eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::treeManager
-  maxTrees: 10
-  treePrefab: {fileID: 5842572098044131225, guid: 91b571d75779f025487383fc2e3f27b5, type: 3}
-  generationInterval: 3
-  rangeX: 20
-  rangeZ: 20
+  treePrefab: {fileID: 0}
+  timeToSpawn: 1
+  startingTrees: 4
+  maxTrees: 20
 --- !u!1 &5594047353697758556
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,7 +323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VirusManager
   virusPrefab: {fileID: 820544728573462140, guid: ba99f323688bff84a8e74dcef381f981, type: 3}
-  timeToSpawn: 1
+  timeToSpawn: 2
 --- !u!1 &6994573731709251232
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,7 +520,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8896451339682983886}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

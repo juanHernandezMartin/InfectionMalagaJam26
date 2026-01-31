@@ -3,67 +3,30 @@ using UnityEngine;
 
 public class treeManager : MonoBehaviour
 {
-    public int maxTrees = 10;
     public GameObject treePrefab;
+    public float timeToSpawn = 1.0f;
+    public int startingTrees = 4;
+    public int maxTrees = 20;
 
-    private List<GameObject> trees;
+    private int currentTrees = 0;
 
-    private float elapsedTime;
-    public float generationInterval = 3f;
-
-    public float rangeX = 20f;
-    public float rangeZ = 20f;
-
-    void Awake()
+    void Start()
     {
-        trees = new List<GameObject> ();
-        elapsedTime = 0f;
-    }
-
-    void Update()
-    {
-        elapsedTime += Time.deltaTime;
-
-        if (elapsedTime >= generationInterval)
+        for (int i = 0; i < startingTrees; i++)
         {
-            CreateTree();
-            elapsedTime = 0;
+            SpawnTrees();
         }
+        InvokeRepeating(nameof(SpawnTrees), timeToSpawn, timeToSpawn);
     }
 
-
-    void RemoveTreeFromList(GameObject tree)
+    public void SpawnTrees()
     {
-        trees.Remove(tree);
+        if (currentTrees >= maxTrees)
+            return;
+        Vector3 treesPosition = new Vector3(0, 0, 0);
+        GameObject newNPC = Instantiate(treePrefab, treesPosition, Random.rotation);
+        newNPC.transform.parent = transform;
+        currentTrees++;
+
     }
-
-    void CreateTree()
-    {
-        if (trees.Count >= maxTrees)
-            return ;
-            
-        Vector3 randomPosition = GetRandomPosition();
-
-        GameObject newTree = Instantiate(treePrefab, randomPosition, Quaternion.identity);
-
-        Tree treeComponent = newTree.GetComponent<Tree>();
-        if (treeComponent == null)
-        {
-            treeComponent = newTree.AddComponent<Tree>();
-        }
-        
-        treeComponent.OnTreeDestroyed += RemoveTreeFromList;
-
-        trees.Add(newTree);
-    }
-
-    Vector3 GetRandomPosition()
-    {
-        float x = Random.Range(-rangeX, rangeX);
-        float z = Random.Range(-rangeZ, rangeZ);
-        float y = 0f;
-
-        return new Vector3(x, y, z);
-    }
-
 }

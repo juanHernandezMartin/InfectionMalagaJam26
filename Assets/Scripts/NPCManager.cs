@@ -4,23 +4,30 @@ using UnityEngine;
 
 public class NPCManager : MonoBehaviour
 {
-    public GameObject npcPrefab;
-    public int NPCAtStart = 20;
+    public GameObject humanPrefab;
+    public float timeToSpawn = 1.0f;
+    public int StartingHumans = 3;
+    public int maxHumans = 20;
+
+    private int currentHumans = 0;
 
     void Start()
     {
-        for(int i = 0; i < NPCAtStart; i++)
+        for (int i = 0; i < StartingHumans; i++)
         {
-            CrearNPC();
+            SpawnHuman();
         }
+        InvokeRepeating(nameof(SpawnHuman), timeToSpawn, timeToSpawn);
     }
 
-    void CrearNPC()
+    public void SpawnHuman()
     {
+        if( currentHumans >= maxHumans)
+            return;
         Vector3 humanPosition = new Vector3(0, 0 ,0);
-        GameObject newNPC = Instantiate(npcPrefab, humanPosition, Random.rotation);
+        GameObject newNPC = Instantiate(humanPrefab, humanPosition, Random.rotation);
         newNPC.transform.parent = transform;
-        Debug.Log($"NPC creado en: {newNPC.transform.position}");
+        currentHumans++;
     }
 
 
