@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4864398461518192760}
   m_Layer: 0
   m_Name: HumanModel
-  m_TagString: Untagged
+  m_TagString: Human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 7836660489009981000}
   m_Layer: 0
   m_Name: RaycastOrigin
-  m_TagString: Untagged
+  m_TagString: Human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,9 +132,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7699828478778258584}
   - component: {fileID: 902298520809883708}
+  - component: {fileID: 2513336162622301465}
+  - component: {fileID: 3417128947412063391}
   m_Layer: 0
   m_Name: HumanPrefab
-  m_TagString: Untagged
+  m_TagString: Human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -172,3 +174,38 @@ MonoBehaviour:
   directionChangeAmount: 30
   raycastDistance: 0.1
   raycastOrigin: {fileID: 7836660489009981000}
+--- !u!135 &2513336162622301465
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6335863531070037829}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.05
+  m_Center: {x: 0, y: 0.525, z: 0}
+--- !u!114 &3417128947412063391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6335863531070037829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 769181faad77ef14799be3df46ff0ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HumanInfection
+  infectedMaterial: {fileID: 2100000, guid: 572ce1eb378232d4e84f561f16247d67, type: 2}
+  humanRenderer: {fileID: 4864398461518192760}
