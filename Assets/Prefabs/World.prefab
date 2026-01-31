@@ -156,6 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7c9051335f2d2f5abdbc738a9470d68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCManager
+  inventory: {fileID: 0}
   humanPrefab: {fileID: 6335863531070037829, guid: c8788f6a16b7c4a42b6161abec2c814e, type: 3}
   timeToSpawn: 30
   StartingHumans: 3
@@ -284,7 +285,7 @@ GameObject:
   - component: {fileID: 7436837049906417794}
   - component: {fileID: 1426943024441667747}
   m_Layer: 0
-  m_Name: Trees
+  m_Name: TreesManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -354,10 +355,10 @@ Transform:
   m_Children:
   - {fileID: 7981766817612299130}
   - {fileID: 4498268618497382153}
-  - {fileID: 7569509431757156077}
   - {fileID: 735907166664471958}
-  - {fileID: 6328420736806965505}
   - {fileID: 7436837049906417794}
+  - {fileID: 7569509431757156077}
+  - {fileID: 6328420736806965505}
   - {fileID: 4097697339499558861}
   - {fileID: 1738183452321822172}
   m_Father: {fileID: 0}

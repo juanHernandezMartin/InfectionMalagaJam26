@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NPCManager : MonoBehaviour
 {
+    public InventoryScript inventory;
     public GameObject humanPrefab;
     public float timeToSpawn = 1.0f;
     public int StartingHumans = 3;
@@ -23,6 +24,7 @@ public class NPCManager : MonoBehaviour
 
     public void SpawnHuman()
     {
+        inventory.healthyCount++;
         if( currentHumans >= maxHumans)
             return;
         Vector3 humanPosition = new Vector3(0, 0 ,0);
@@ -31,7 +33,4 @@ public class NPCManager : MonoBehaviour
         newNPC.GetComponent<HumanInfection>().npcManager = this;
         currentHumans++;
     }
-
-
-
 }
