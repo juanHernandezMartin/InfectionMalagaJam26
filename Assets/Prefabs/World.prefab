@@ -320,9 +320,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::treeManager
   inventory: {fileID: 0}
   treePrefab: {fileID: 8539458627565621529, guid: ba95c8ddb3ce3c04abdd9888bbfb542f, type: 3}
-  timeToSpawn: 10
+  timeToSpawn: 5
   startingTrees: 4
-  maxTrees: 10
+  maxTrees: 15
   currentTrees: 0
 --- !u!1 &4117638066939182895
 GameObject:

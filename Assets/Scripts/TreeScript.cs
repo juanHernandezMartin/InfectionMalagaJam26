@@ -26,4 +26,15 @@ public class TreeScript : MonoBehaviour
             treeManager.currentTrees--;
         }
     }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Obstacle") )
+        {
+            Debug.Log("Tree hit obstacle, respawning");
+            treeManager.currentTrees--;
+            treeManager.SpawnTrees();
+            Destroy(gameObject);
+        }
+    }
 }
