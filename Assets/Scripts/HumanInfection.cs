@@ -57,7 +57,7 @@ public class HumanInfection : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Human"))
+        if (other.CompareTag("Human") && isInfected)
         {
             if( isMasked )
                 return;
