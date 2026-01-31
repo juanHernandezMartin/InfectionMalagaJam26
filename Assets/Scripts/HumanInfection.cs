@@ -15,6 +15,8 @@ public class HumanInfection : MonoBehaviour
 
     public void Infect()
     {
+        if (isInfected || isMasked)
+            return;
         isInfected = true;
         humanRenderer.material = infectedMaterial;
     }
