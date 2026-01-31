@@ -163,9 +163,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7699828478778258584}
   - component: {fileID: 902298520809883708}
-  - component: {fileID: 2513336162622301465}
   - component: {fileID: 3417128947412063391}
   - component: {fileID: 1411508562459418854}
+  - component: {fileID: 4442273245839096770}
   m_Layer: 0
   m_Name: HumanPrefab
   m_TagString: Human
@@ -206,27 +206,6 @@ MonoBehaviour:
   directionChangeAmount: 30
   raycastDistance: 0.1
   raycastOrigin: {fileID: 7836660489009981000}
---- !u!135 &2513336162622301465
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6335863531070037829}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.05
-  m_Center: {x: 0, y: 0.525, z: 0}
 --- !u!114 &3417128947412063391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,7 +220,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HumanInfection
   infectedMaterial: {fileID: 2100000, guid: 81068a0e210a7c24ab4fbe8b5bc91fee, type: 2}
   humanRenderer: {fileID: 1544910785922612723}
-  maskDuration: 10
+  maskDuration: 15
+  npcManager: {fileID: 0}
   maskObject: {fileID: 5083223586603404419}
   healthDuration: 20
 --- !u!54 &1411508562459418854
@@ -271,6 +251,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &4442273245839096770
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6335863531070037829}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.05, y: 0.13, z: 0.05}
+  m_Center: {x: 0, y: 0.55, z: -0.01}
 --- !u!1001 &9187689764516119212
 PrefabInstance:
   m_ObjectHideFlags: 0
