@@ -270,6 +270,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61df49e59aaa9274398808cd2af96ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VirusManager
+  virusPrefab: {fileID: 820544728573462140, guid: ba99f323688bff84a8e74dcef381f981, type: 3}
+  timeToSpawn: 2
 --- !u!1 &6994573731709251232
 GameObject:
   m_ObjectHideFlags: 0
