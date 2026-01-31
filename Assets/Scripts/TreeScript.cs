@@ -1,10 +1,13 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class TreeScript : MonoBehaviour
 {
     [HideInInspector]
     public treeManager treeManager;
+    public TreeAnimation treeAnimation;
     public int maxWood = 5;
+    
     private int currentWood = 0;
 
     private void Start()
@@ -15,6 +18,7 @@ public class TreeScript : MonoBehaviour
     public void OnMouseDown()
     {
         treeManager.inventory.woodCount++;
+        treeAnimation.StartClickAnimation();
         currentWood--;
         if (currentWood < 0)
         {

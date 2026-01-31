@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8655876762022658233}
+  - component: {fileID: 5745825595134618158}
   m_Layer: 0
   m_Name: TreeModel
   m_TagString: Untagged
@@ -33,6 +34,21 @@ Transform:
   - {fileID: 8604427688712991341}
   m_Father: {fileID: 3673922697823097421}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5745825595134618158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375952568506367921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe02fa9641dcd14d9bd785bfafa95dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TreeAnimation
+  animTime: 3
+  animStrength: 10
+  clickAnimStrength: 0.001
 --- !u!1 &3365970628513775976
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,4 +298,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5833a0f6342c805459da7b414db7cd03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TreeScript
+  treeManager: {fileID: 0}
+  treeAnimation: {fileID: 5745825595134618158}
   maxWood: 5
