@@ -160,6 +160,7 @@ MonoBehaviour:
   timeToSpawn: 10
   StartingHumans: 3
   maxHumans: 10
+  currentHumans: 0
 --- !u!1 &1839518701696949645
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,6 +321,7 @@ MonoBehaviour:
   timeToSpawn: 5
   startingTrees: 4
   maxTrees: 10
+  currentTrees: 0
 --- !u!1 &4117638066939182895
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,6 +393,7 @@ MonoBehaviour:
   timeToSpawn: 1
   startingTrees: 4
   maxTrees: 20
+  currentTrees: 0
 --- !u!1 &5594047353697758556
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,6 +440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::VirusManager
   virusPrefab: {fileID: 820544728573462140, guid: ba99f323688bff84a8e74dcef381f981, type: 3}
   timeToSpawn: 5
+  currentVirus: 0
 --- !u!1 &6994573731709251232
 GameObject:
   m_ObjectHideFlags: 0

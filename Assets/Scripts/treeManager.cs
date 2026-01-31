@@ -8,7 +8,8 @@ public class treeManager : MonoBehaviour
     public int startingTrees = 4;
     public int maxTrees = 20;
 
-    private int currentTrees = 0;
+    [HideInInspector]
+    public int currentTrees = 0;
 
     void Start()
     {
@@ -24,8 +25,9 @@ public class treeManager : MonoBehaviour
         if (currentTrees >= maxTrees)
             return;
         Vector3 treesPosition = new Vector3(0, 0, 0);
-        GameObject newNPC = Instantiate(treePrefab, treesPosition, Random.rotation);
-        newNPC.transform.parent = transform;
+        GameObject newTree = Instantiate(treePrefab, treesPosition, Random.rotation);
+        newTree.transform.parent = transform;
+        newTree.GetComponent<TreeScript>().treeManager = this;
         currentTrees++;
 
     }

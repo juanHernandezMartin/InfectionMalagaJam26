@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class TreeScript : MonoBehaviour
 {
+    [HideInInspector]
+    public treeManager treeManager;
     public int maxWood = 5;
     private int currentWood = 0;
 
@@ -16,6 +18,7 @@ public class TreeScript : MonoBehaviour
         if (currentWood < 0)
         {
             Destroy(gameObject);
+            treeManager.currentTrees--;
         }
     }
 }

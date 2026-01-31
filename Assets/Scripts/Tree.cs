@@ -11,11 +11,6 @@ public class Tree : MonoBehaviour
         currentResources = maxResources;
     }
 
-    void Update()
-    {
-
-    }
-
     public int HarvestResources(int amount)
     {
         int harvested = Mathf.Min(amount, currentResources);
