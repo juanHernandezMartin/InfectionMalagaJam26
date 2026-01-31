@@ -7,7 +7,7 @@ public class FactoryScript : MonoBehaviour
     public GameObject factoryModel;
     public GameObject factoryParticles;
     public int maskPrice = 5;
-    public int buildPrice = 10;
+    private int buildPrice = 50;
 
     private bool isBuilt = false;
 
@@ -28,7 +28,7 @@ public class FactoryScript : MonoBehaviour
 
         if (inventory.woodCount >= maskPrice)
         {
-            inventory.woodCount-=price;
+            inventory.woodCount-=maskPrice;
             inventory.maskCount++;
             factoryAnimation.StartClickAnimation();
         }
