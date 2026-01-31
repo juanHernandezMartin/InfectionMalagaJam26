@@ -11,7 +11,6 @@ public class FactoryScript : MonoBehaviour
     public int buildPrice = 10;
     public float productionTime = 2.0f;
     public float productionTimer = 0.0f;
-    public bool isProducing = false;
 
     private bool isBuilt = false;
     private UnityEngine.UI.Slider productionSlider;
@@ -38,10 +37,9 @@ public class FactoryScript : MonoBehaviour
             return;
         }
 
-        if (inventory.woodCount >= maskPrice)
+        if (inventory.woodCount >= maskPrice && productionTimer <= 0)
         {
             inventory.woodCount-=maskPrice;
-            inventory.maskCount++;
             factoryAnimation.StartClickAnimation();
             factoryUI.slider.SetActive(true);
             factoryUI.exangeSign.SetActive(false);
