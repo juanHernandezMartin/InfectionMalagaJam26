@@ -42,11 +42,11 @@ public class treeManager : MonoBehaviour
         if (trees.Count >= maxTrees)
             return ;
             
-        //float radius = 0.4985f;
+        float radius = 0; //0.4985f;
         Vector3 randomDirection = Random.onUnitSphere;
-        //Vector3 position = randomDirection * radius;
+        Vector3 position = randomDirection * radius;
 
-        //Quaternion rotation = Quaternion.FromToRotation(Vector3.up, randomDirection);
+        Quaternion rotation = Quaternion.FromToRotation(Vector3.up, randomDirection);
 
         GameObject newTree = Instantiate(treePrefab, position, rotation, transform);
 
