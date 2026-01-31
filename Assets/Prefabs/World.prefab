@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::treeManager
   maxTrees: 10
-  treePrefab: {fileID: 6444170629849417647, guid: 91b571d75779f025487383fc2e3f27b5, type: 3}
+  treePrefab: {fileID: 4768276570994253432, guid: 030e75281c4b163ec9f900bc6e719f08, type: 3}
   generationInterval: 3
   rangeX: 20
   rangeZ: 20
