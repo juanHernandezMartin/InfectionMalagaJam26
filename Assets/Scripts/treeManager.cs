@@ -31,6 +31,12 @@ public class treeManager : MonoBehaviour
         }
     }
 
+
+    void RemoveTreeFromList(GameObject tree)
+    {
+        trees.Remove(tree);
+    }
+
     void CreateTree()
     {
         if (trees.Count >= maxTrees)
@@ -39,6 +45,14 @@ public class treeManager : MonoBehaviour
         Vector3 randomPosition = GetRandomPosition();
 
         GameObject newTree = Instantiate(treePrefab, randomPosition, Quaternion.identity);
+
+        Tree treeComponent = newTree.GetComponent<Tree>();
+        if (treeComponent == null)
+        {
+            treeComponent = newTree.AddComponent<Tree>();
+        }
+        
+        treeComponent.OnTreeDestroyed += RemoveTreeFromList;
 
         trees.Add(newTree);
     }

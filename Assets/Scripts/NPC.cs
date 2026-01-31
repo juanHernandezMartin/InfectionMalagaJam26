@@ -2,9 +2,7 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour
 {
-    public float x;
-    public float y;
-    public float z;
+    public Vector3 position;
 
     public bool infectado;
 
