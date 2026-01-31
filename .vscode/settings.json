@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "jam.slnx"
+    "dotnet.defaultSolution": "InfectionMalagaJam26.slnx"
 }

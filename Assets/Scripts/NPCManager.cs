@@ -11,9 +11,10 @@ public class NPCManager : MonoBehaviour
     void Start()
     {
         world = this.gameObject.transform;
-        int i = 0;
-        while (i < 10)
+        for(int i = 0; i < 5; i++)
+        {
             CrearNPC();
+        }
     }
 
     void CrearNPC()
