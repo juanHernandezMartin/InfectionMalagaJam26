@@ -14,6 +14,7 @@ public class TreeScript : MonoBehaviour
 
     public void OnMouseDown()
     {
+        treeManager.inventory.woodCount++;
         currentWood--;
         if (currentWood < 0)
         {

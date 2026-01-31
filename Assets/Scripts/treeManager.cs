@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class treeManager : MonoBehaviour
 {
+    public InventoryScript inventory;
     public GameObject treePrefab;
     public float timeToSpawn = 1.0f;
     public int startingTrees = 4;
@@ -29,6 +30,5 @@ public class treeManager : MonoBehaviour
         newTree.transform.parent = transform;
         newTree.GetComponent<TreeScript>().treeManager = this;
         currentTrees++;
-
     }
 }

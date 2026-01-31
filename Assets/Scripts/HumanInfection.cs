@@ -21,6 +21,8 @@ public class HumanInfection : MonoBehaviour
         if (isInfected || isMasked)
             return;
         isInfected = true;
+        npcManager.inventory.healthyCount--;
+        npcManager.inventory.infectedCount++;
         humanRenderer.material = infectedMaterial;
     }
 
@@ -28,8 +30,9 @@ public class HumanInfection : MonoBehaviour
     {
         if (healthDuration <= 0)
         {
-            Destroy(gameObject);
             npcManager.currentHumans--;
+            npcManager.inventory.infectedCount--;
+            Destroy(gameObject);
         }
 
         if (isInfected)
@@ -61,6 +64,8 @@ public class HumanInfection : MonoBehaviour
         {
             if( isMasked )
                 return;
+            npcManager.inventory.healthyCount--;
+            npcManager.inventory.infectedCount++;
             other.GetComponent<HumanInfection>().Infect();
         }
     }
