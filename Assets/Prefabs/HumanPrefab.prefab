@@ -209,3 +209,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HumanInfection
   infectedMaterial: {fileID: 2100000, guid: 572ce1eb378232d4e84f561f16247d67, type: 2}
   humanRenderer: {fileID: 4864398461518192760}
+  healthDuration: 20
