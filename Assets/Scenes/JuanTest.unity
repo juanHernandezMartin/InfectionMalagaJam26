@@ -119,6 +119,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &491990851 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7270195352526504311, guid: aae23d21266c7bd46822b5177f1bb093, type: 3}
+  m_PrefabInstance: {fileID: 1803922322}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5badea2ef298574e9d00d3b808f1e9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FactoryScript
 --- !u!1 &646598356
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,6 +334,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8439213361494248200, guid: 173bbceb05e881e459b1dab5528bc364, type: 3}
+      propertyPath: factoriesToImprove.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439213361494248200, guid: 173bbceb05e881e459b1dab5528bc364, type: 3}
+      propertyPath: 'factoriesToImprove.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1325986202}
+    - target: {fileID: 8439213361494248200, guid: 173bbceb05e881e459b1dab5528bc364, type: 3}
+      propertyPath: 'factoriesToImprove.Array.data[1]'
+      value: 
+      objectReference: {fileID: 491990851}
+    - target: {fileID: 8439213361494248200, guid: 173bbceb05e881e459b1dab5528bc364, type: 3}
+      propertyPath: 'factoriesToImprove.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1326416114}
     - target: {fileID: 8864028728789250332, guid: 173bbceb05e881e459b1dab5528bc364, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -449,6 +476,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1325986202 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5250045500314245412, guid: aae23d21266c7bd46822b5177f1bb093, type: 3}
+  m_PrefabInstance: {fileID: 1803922322}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5badea2ef298574e9d00d3b808f1e9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FactoryScript
+--- !u!114 &1326416114 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1087003310824548604, guid: aae23d21266c7bd46822b5177f1bb093, type: 3}
+  m_PrefabInstance: {fileID: 1803922322}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5badea2ef298574e9d00d3b808f1e9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FactoryScript
 --- !u!1001 &1377794553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -616,6 +665,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41351ae9f25d13e3fa96c4a6e5d001eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::treeManager
+--- !u!1 &2027712716 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7690130575411921322, guid: 173bbceb05e881e459b1dab5528bc364, type: 3}
+  m_PrefabInstance: {fileID: 1102105917}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2057264059 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1678467056793715160, guid: 173bbceb05e881e459b1dab5528bc364, type: 3}
@@ -695,6 +749,10 @@ PrefabInstance:
       propertyPath: infectedText
       value: 
       objectReference: {fileID: 1102105918}
+    - target: {fileID: 9216758575337203265, guid: bade504232c0ff541a4e922d319873c4, type: 3}
+      propertyPath: factoryImprovementUI
+      value: 
+      objectReference: {fileID: 2027712716}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
