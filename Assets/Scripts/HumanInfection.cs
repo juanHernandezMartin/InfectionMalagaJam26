@@ -3,6 +3,7 @@ using UnityEngine;
 public class HumanInfection : MonoBehaviour
 {
     public Material infectedMaterial;
+    private Material healthyMaterial;
     public Renderer humanRenderer;
     public float maskDuration = 10f;
 
@@ -14,7 +15,18 @@ public class HumanInfection : MonoBehaviour
     private bool isMasked = false;
     private float maskDurationTimer = 0f;
 
-    public float healthDuration = 20;
+    private float currentHealth;
+    public float maxHealth = 60;
+    public float maxVirusDuration = 20;
+    public float currentVirusDuration;
+
+
+    void Start()
+    {
+        currentHealth = maxHealth;
+        healthyMaterial = humanRenderer.material;
+        currentVirusDuration = maxVirusDuration;
+    }
 
     public void Infect()
     {
@@ -24,20 +36,31 @@ public class HumanInfection : MonoBehaviour
         npcManager.inventory.healthyCount--;
         npcManager.inventory.infectedCount++;
         humanRenderer.material = infectedMaterial;
+        currentVirusDuration = maxVirusDuration;
     }
 
     public void Update()
     {
-        if (healthDuration <= 0)
+        if (currentHealth <= 0)
         {
             npcManager.currentHumans--;
             npcManager.inventory.infectedCount--;
             Destroy(gameObject);
         }
 
+        if(currentVirusDuration <= 0)
+        {
+            isInfected = false;
+            npcManager.currentHumans++;
+            npcManager.inventory.infectedCount--;
+            currentHealth = maxHealth;
+            humanRenderer.material = healthyMaterial;
+        }
+
         if (isInfected)
         {
-            healthDuration -= Time.deltaTime;
+            currentHealth -= Time.deltaTime;
+            currentVirusDuration -= Time.deltaTime;
         }
 
         if (isMasked)

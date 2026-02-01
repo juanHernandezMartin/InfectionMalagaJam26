@@ -158,7 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCManager
   inventory: {fileID: 0}
   humanPrefab: {fileID: 6335863531070037829, guid: c8788f6a16b7c4a42b6161abec2c814e, type: 3}
-  timeToSpawn: 30
+  timeToSpawn: 10
   StartingHumans: 3
   maxHumans: 10
   currentHumans: 0
@@ -426,7 +426,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::VirusManager
   virusPrefab: {fileID: 820544728573462140, guid: ba99f323688bff84a8e74dcef381f981, type: 3}
   timeToSpawn: 5
-  currentVirus: 0
+  npcManager: {fileID: 5509628248328153862}
+  currentAmountOfVirus: 0
 --- !u!1 &6994573731709251232
 GameObject:
   m_ObjectHideFlags: 0
