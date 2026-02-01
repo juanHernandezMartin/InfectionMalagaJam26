@@ -76,7 +76,7 @@ public class FactoryScript : MonoBehaviour
             productionTimer -= Time.deltaTime;
             if (productionTimer <= 0)
             {
-                inventory.maskCount+=5;
+                inventory.maskCount+=3;
                 factoryUI.slider.SetActive(false);
                 factoryUI.exangeSign.SetActive(true);
             }
