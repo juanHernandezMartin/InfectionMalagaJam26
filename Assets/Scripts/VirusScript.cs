@@ -9,9 +9,12 @@ public class VirusScript : MonoBehaviour
     {
         if (other.CompareTag("Human"))
         {
-            other.GetComponent<HumanInfection>().Infect();
-            virusManager.currentAmountOfVirus--;
-            Destroy(virusPrefab);
+            if (!other.GetComponent<HumanInfection>().isInfected)
+            {
+                other.GetComponent<HumanInfection>().Infect();
+                virusManager.currentAmountOfVirus--;
+                Destroy(virusPrefab);
+            }
         }
 
         if(other.gameObject.CompareTag("Obstacle") )
@@ -19,7 +22,7 @@ public class VirusScript : MonoBehaviour
             Debug.Log("Virus hit obstacle, respawning");
             virusManager.currentAmountOfVirus--;
             virusManager.SpawnVirus();
-            Destroy(gameObject);
+            Destroy(virusPrefab);
         }
     }
 }
