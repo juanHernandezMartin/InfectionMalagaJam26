@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class TreeScript : MonoBehaviour
 {
+    public GameObject woodPlusOneUI;
+    public float woodAnimationTime = 0.1f;
+    public float woodJumpPower = 0.1f;
     [HideInInspector]
     public treeManager treeManager;
     public TreeAnimation treeAnimation;
@@ -12,11 +15,12 @@ public class TreeScript : MonoBehaviour
     public bool improvedWood = false;
     
     private int currentWood = 0;
+    private Vector3 initialUIPosition;
 
     void Update()
     {
         timeToBecomeVisible -= Time.deltaTime;
-        if(timeToBecomeVisible <= 0)
+        if (timeToBecomeVisible <= 0)
         {
             treeMesh.SetActive(true);
         }
@@ -29,6 +33,7 @@ public class TreeScript : MonoBehaviour
 
     public void OnMouseDown()
     {
+        initialUIPosition = woodPlusOneUI.transform.localPosition;
         treeManager.inventory.woodCount++;
         if (improvedWood)
         {
@@ -37,16 +42,22 @@ public class TreeScript : MonoBehaviour
 
         treeAnimation.StartClickAnimation();
         currentWood--;
-        if (currentWood < 0)
+        woodPlusOneUI.SetActive(true);
+        woodPlusOneUI.transform.DOLocalMoveZ( woodJumpPower, woodAnimationTime ).OnComplete(() =>
         {
-            Destroy(gameObject);
-            treeManager.currentTrees--;
-        }
+            woodPlusOneUI.SetActive(false);
+            if (currentWood < 0)
+            {
+                Destroy(gameObject);
+                treeManager.currentTrees--;
+            }
+            woodPlusOneUI.transform.localPosition = initialUIPosition;
+        });
     }
 
     public void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Obstacle") )
+        if (other.gameObject.CompareTag("Obstacle"))
         {
             Debug.Log("Tree hit obstacle, respawning");
             treeManager.currentTrees--;
