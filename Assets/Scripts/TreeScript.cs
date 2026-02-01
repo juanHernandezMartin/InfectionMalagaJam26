@@ -7,8 +7,19 @@ public class TreeScript : MonoBehaviour
     public treeManager treeManager;
     public TreeAnimation treeAnimation;
     public int maxWood = 5;
+    private float timeToBecomeVisible = 1;
+    public GameObject treeMesh;
     
     private int currentWood = 0;
+
+    void Update()
+    {
+        timeToBecomeVisible -= Time.deltaTime;
+        if(timeToBecomeVisible <= 0)
+        {
+            treeMesh.SetActive(true);
+        }
+    }
 
     private void Start()
     {

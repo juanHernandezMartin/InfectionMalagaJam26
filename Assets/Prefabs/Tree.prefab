@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8655876762022658233
 Transform:
   m_ObjectHideFlags: 0
@@ -302,6 +302,7 @@ MonoBehaviour:
   treeManager: {fileID: 0}
   treeAnimation: {fileID: 5745825595134618158}
   maxWood: 5
+  treeMesh: {fileID: 1375952568506367921}
 --- !u!54 &7094463870420564751
 Rigidbody:
   m_ObjectHideFlags: 0
