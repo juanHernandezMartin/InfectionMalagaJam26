@@ -1750,6 +1750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5833a0f6342c805459da7b414db7cd03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TreeScript
+  woodUI: {fileID: 2495695942943951534}
   woodPlusOneUI: {fileID: 733187402734444162}
   woodAnimationTime: 0.1
   woodJumpPower: 0.02
@@ -1757,6 +1758,7 @@ MonoBehaviour:
   treeAnimation: {fileID: 5745825595134618158}
   maxWood: 5
   treeMesh: {fileID: 1375952568506367921}
+  improvedWood: 0
 --- !u!54 &7094463870420564751
 Rigidbody:
   m_ObjectHideFlags: 0
