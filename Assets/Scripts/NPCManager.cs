@@ -1,9 +1,11 @@
 using System.Collections.Generic;
 //using System.Numerics;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NPCManager : MonoBehaviour
 {
+    public Image maskUI;
     public InventoryScript inventory;
     public GameObject humanPrefab;
     public float timeToSpawn = 1.0f;
@@ -31,6 +33,7 @@ public class NPCManager : MonoBehaviour
         GameObject newNPC = Instantiate(humanPrefab, humanPosition, Random.rotation);
         newNPC.transform.parent = transform;
         newNPC.GetComponent<HumanInfection>().npcManager = this;
+        newNPC.GetComponent<HumanInfection>().maskUI = maskUI;
         currentHumans++;
     }
 }

@@ -1,4 +1,6 @@
+using DG.Tweening;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HumanInfection : MonoBehaviour
 {
@@ -7,6 +9,7 @@ public class HumanInfection : MonoBehaviour
     private Material healthyMaterial;
     public Renderer humanRenderer;
     public float maskDuration = 10f;
+    public Image maskUI;
 
     [HideInInspector]
     public NPCManager npcManager;
@@ -81,7 +84,17 @@ public class HumanInfection : MonoBehaviour
     public void OnMouseDown()
     {
         if( npcManager.inventory.maskCount <= 0 )
+        {
+            maskUI.gameObject.transform.DOPunchScale( new Vector3(0.4f,0.4f,0), 0.5f, 10, 1 );
+
+            //dotween for color
+            maskUI.DOColor( Color.red, 0.25f ).OnComplete( ()=>
+            {
+                maskUI.DOColor( Color.white, 0.25f );
+            } );
             return;
+        }
+            
         isMasked = true;
         maskDurationTimer = maskDuration;
         npcManager.inventory.maskCount--;
