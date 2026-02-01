@@ -4846,6 +4846,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5841556520676034757}
   - component: {fileID: 220061366560315795}
+  - component: {fileID: -1886941344210530973}
   m_Layer: 0
   m_Name: Virus
   m_TagString: Untagged
@@ -4883,6 +4884,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VirusReference
   virusScript: {fileID: 7738404996230395062}
+--- !u!114 &-1886941344210530973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820544728573462140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e459a22cf54401e42869870ab38a2403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VirusRotation
 --- !u!1001 &6469009910527666196
 PrefabInstance:
   m_ObjectHideFlags: 0
