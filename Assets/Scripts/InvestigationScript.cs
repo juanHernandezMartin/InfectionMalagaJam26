@@ -16,7 +16,9 @@ public class InvestigationScript : MonoBehaviour
     public int buildPrice = 10;
 
     public float investigationTime = 10.0f;
-    public float investigationTimer = 0.0f;
+    public float currentProgress = 0.0f;
+
+    public bool isEnabled;
 
     private bool isBuilt = false;
     private float per;
@@ -30,25 +32,28 @@ public class InvestigationScript : MonoBehaviour
             investigationModel.SetActive(true);
             buildingUI.SetActive(false);
             progressUI.SetActive(true);
-            investigationTimer = investigationTime;
+            currentProgress = investigationTime;
             percentage.SetActive(true);
+            isEnabled = true;
 
         }
     }
 
     private void Update()
     {
-        if (investigationTimer > 0)
+        if (isEnabled)
         {
-            progressSlider.value = 1 - (investigationTimer / investigationTime);
+            progressSlider.value = 1 - (currentProgress / investigationTime);
             per = progressSlider.value * 100;
             percentage.GetComponent<TextMeshProUGUI>().text = per.ToString("0.0") + "%";
-            investigationTimer -= Time.deltaTime;
-            if (investigationTimer <= 0)
+            currentProgress -= Time.deltaTime;
+
+            if (currentProgress <= 0  && inventory.healthyCount >= 10)
             {
                 winUI.SetActive(true);
             }
         }
+       
     }
 }
 

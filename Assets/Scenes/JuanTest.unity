@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &483826555 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4530741404606051735, guid: 173bbceb05e881e459b1dab5528bc364, type: 3}
+  m_PrefabInstance: {fileID: 1102105917}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &491990851 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7270195352526504311, guid: aae23d21266c7bd46822b5177f1bb093, type: 3}
@@ -240,21 +245,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_CustomShadowLayers: 0
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
-  m_SoftShadowQuality: 0
-  m_RenderingLayersMask:
-    m_Bits: 1
-  m_ShadowRenderingLayersMask:
-    m_Bits: 1
-  m_Version: 4
-  m_LightLayerMask: 1
-  m_ShadowLayerMask: 1
-  m_RenderingLayers: 1
-  m_ShadowRenderingLayers: 1
 --- !u!1 &868613192 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2516990998957005752, guid: aeba5038f04e85244962f195ad839bdc, type: 3}
@@ -277,37 +267,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
-  m_Cameras: []
-  m_RendererIndex: -1
-  m_VolumeLayerMask:
-    m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
-  m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
-  m_AntialiasingQuality: 2
-  m_StopNaN: 0
-  m_Dithering: 0
-  m_ClearDepth: 1
-  m_AllowXRRendering: 1
-  m_AllowHDROutput: 1
-  m_UseScreenCoordOverride: 0
-  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
-  m_RequiresDepthTexture: 0
-  m_RequiresColorTexture: 0
-  m_TaaSettings:
-    m_Quality: 3
-    m_FrameInfluence: 0.1
-    m_JitterScale: 1
-    m_MipBias: 0
-    m_VarianceClampScale: 0.9
-    m_ContrastAdaptiveSharpening: 0
-  m_Version: 2
 --- !u!114 &868613198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -416,6 +375,22 @@ PrefabInstance:
     - target: {fileID: 586803595978359097, guid: 173bbceb05e881e459b1dab5528bc364, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ImproveWood
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578001244650578281, guid: 173bbceb05e881e459b1dab5528bc364, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530741404606051735, guid: 173bbceb05e881e459b1dab5528bc364, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5042308269995048591, guid: 173bbceb05e881e459b1dab5528bc364, type: 3}
+      propertyPath: m_text
+      value: 0%
+      objectReference: {fileID: 0}
+    - target: {fileID: 5042308269995048591, guid: 173bbceb05e881e459b1dab5528bc364, type: 3}
+      propertyPath: m_margin.z
+      value: -145.65814
       objectReference: {fileID: 0}
     - target: {fileID: 6410859054833510361, guid: 173bbceb05e881e459b1dab5528bc364, type: 3}
       propertyPath: m_Pivot.x
@@ -819,6 +794,14 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1001824419}
+    - target: {fileID: 1761267676671412582, guid: aae23d21266c7bd46822b5177f1bb093, type: 3}
+      propertyPath: buildPrice
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1761267676671412582, guid: aae23d21266c7bd46822b5177f1bb093, type: 3}
+      propertyPath: percentage
+      value: 
+      objectReference: {fileID: 483826555}
     - target: {fileID: 4117638066939182895, guid: aae23d21266c7bd46822b5177f1bb093, type: 3}
       propertyPath: m_Name
       value: World
@@ -839,6 +822,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1001824419}
+    - target: {fileID: 5509628248328153862, guid: aae23d21266c7bd46822b5177f1bb093, type: 3}
+      propertyPath: timeToSpawn
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 7270195352526504311, guid: aae23d21266c7bd46822b5177f1bb093, type: 3}
       propertyPath: woodIcon
       value: 
