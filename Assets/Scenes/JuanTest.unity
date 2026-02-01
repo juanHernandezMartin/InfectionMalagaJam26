@@ -511,6 +511,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aeba5038f04e85244962f195ad839bdc, type: 3}
+--- !u!1 &1490295568 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 863829793704513410, guid: 173bbceb05e881e459b1dab5528bc364, type: 3}
+  m_PrefabInstance: {fileID: 1102105917}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1803922322
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -531,6 +536,10 @@ PrefabInstance:
       propertyPath: improveWoodButton
       value: 
       objectReference: {fileID: 1102105921}
+    - target: {fileID: 1761267676671412582, guid: aae23d21266c7bd46822b5177f1bb093, type: 3}
+      propertyPath: winUI
+      value: 
+      objectReference: {fileID: 1490295568}
     - target: {fileID: 1761267676671412582, guid: aae23d21266c7bd46822b5177f1bb093, type: 3}
       propertyPath: inventory
       value: 

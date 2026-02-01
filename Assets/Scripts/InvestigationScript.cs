@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class InvestigationScript : MonoBehaviour
 {
+    public GameObject winUI;
     public InventoryScript inventory;
     public GameObject investigationModel;
     public GameObject buildingUI;
@@ -37,8 +38,7 @@ public class InvestigationScript : MonoBehaviour
             investigationTimer -= Time.deltaTime;
             if (investigationTimer <= 0)
             {
-                //reload secene
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                winUI.SetActive(true);
             }
         }
     }

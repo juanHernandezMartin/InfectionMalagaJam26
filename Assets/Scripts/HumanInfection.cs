@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class HumanInfection : MonoBehaviour
 {
+    public GameObject virusParticleSystem;
     public Material infectedMaterial;
     private Material healthyMaterial;
     public Renderer humanRenderer;
@@ -32,6 +33,7 @@ public class HumanInfection : MonoBehaviour
     {
         if (isInfected || isMasked)
             return;
+        virusParticleSystem.SetActive(true);
         isInfected = true;
         npcManager.inventory.healthyCount--;
         npcManager.inventory.infectedCount++;
@@ -51,6 +53,7 @@ public class HumanInfection : MonoBehaviour
 
         if(currentVirusDuration <= 0)
         {
+            virusParticleSystem.SetActive(false);
             isInfected = false;
             npcManager.inventory.healthyCount++;
             npcManager.inventory.infectedCount--;
