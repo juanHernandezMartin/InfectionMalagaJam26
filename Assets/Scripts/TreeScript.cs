@@ -9,6 +9,7 @@ public class TreeScript : MonoBehaviour
     public int maxWood = 5;
     private float timeToBecomeVisible = 0.1f;
     public GameObject treeMesh;
+    public bool improvedWood = false;
     
     private int currentWood = 0;
 
@@ -29,6 +30,11 @@ public class TreeScript : MonoBehaviour
     public void OnMouseDown()
     {
         treeManager.inventory.woodCount++;
+        if (improvedWood)
+        {
+           treeManager.inventory.woodCount++;
+        }
+
         treeAnimation.StartClickAnimation();
         currentWood--;
         if (currentWood < 0)

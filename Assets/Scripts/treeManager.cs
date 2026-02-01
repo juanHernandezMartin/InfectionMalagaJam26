@@ -12,6 +12,8 @@ public class treeManager : MonoBehaviour
 
     [HideInInspector]
     public int currentTrees = 0;
+    public bool improvedWood = false;
+    public GameObject improveWoodButton;
 
     void Start()
     {
@@ -26,6 +28,10 @@ public class treeManager : MonoBehaviour
     void Update()
     {
         maxTrees = initialMaxTrees + inventory.healthyCount;
+        if(inventory.healthyCount >= 5 && !improvedWood)
+        {
+            ShowImprovingButton();
+        }
     }
 
     public void SpawnTrees()
@@ -36,6 +42,25 @@ public class treeManager : MonoBehaviour
         GameObject newTree = Instantiate(treePrefab, treesPosition, Random.rotation);
         newTree.transform.parent = transform;
         newTree.GetComponent<TreeScript>().treeManager = this;
+        if (improvedWood)
+        {
+            newTree.GetComponent<TreeScript>().improvedWood = true;
+        }
         currentTrees++;
+    }
+
+    public void ShowImprovingButton()
+    {
+        improveWoodButton.SetActive(true);
+    }
+
+    public void ImproveWood(int price)
+    {
+        if(inventory.woodCount >= price)
+        {
+            inventory.woodCount-= price;
+            improvedWood = true;
+            improveWoodButton.SetActive(false);
+        }
     }
 }

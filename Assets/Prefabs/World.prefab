@@ -48,7 +48,7 @@ MonoBehaviour:
   humanPrefab: {fileID: 6335863531070037829, guid: c8788f6a16b7c4a42b6161abec2c814e, type: 3}
   timeToSpawn: 10
   StartingHumans: 3
-  maxHumans: 10
+  maxHumans: 15
   currentHumans: 0
 --- !u!1 &1839518701696949645
 GameObject:
@@ -212,6 +212,8 @@ MonoBehaviour:
   startingTrees: 4
   maxTrees: 15
   currentTrees: 0
+  improvedWood: 0
+  improveWoodButton: {fileID: 0}
 --- !u!1 &4117638066939182895
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,6 +624,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 246.95
       objectReference: {fileID: 0}
+    - target: {fileID: 2454686763931393412, guid: 696fcfa789bcf5742a569d44afa88a51, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2454686763931393412, guid: 696fcfa789bcf5742a569d44afa88a51, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3339136310221283164, guid: 696fcfa789bcf5742a569d44afa88a51, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -643,6 +653,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7647508366773677505, guid: 696fcfa789bcf5742a569d44afa88a51, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315498754291189725, guid: 696fcfa789bcf5742a569d44afa88a51, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315498754291189725, guid: 696fcfa789bcf5742a569d44afa88a51, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315498754291189725, guid: 696fcfa789bcf5742a569d44afa88a51, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
