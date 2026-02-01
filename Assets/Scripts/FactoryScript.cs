@@ -1,7 +1,10 @@
+using DG.Tweening;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FactoryScript : MonoBehaviour
 {
+    public Image woodIcon;
     public FactoryAnimation factoryAnimation;
     public FactoryUI factoryUI;
     public InventoryScript inventory;
@@ -35,7 +38,13 @@ public class FactoryScript : MonoBehaviour
             return;
         }
 
-        if (inventory.woodCount >= maskPrice && productionTimer <= 0)
+        if( inventory.woodCount < maskPrice )
+        {
+            woodIcon.transform.DOPunchScale( new Vector3(0.4f,0.4f,0), 0.5f, 10, 1 );
+            return;
+        }
+
+        if ( productionTimer <= 0 )
         {
             inventory.woodCount-=maskPrice;
             factoryAnimation.StartClickAnimation();
