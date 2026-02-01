@@ -1,8 +1,10 @@
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 
 public class TreeScript : MonoBehaviour
 {
+    public TextMeshProUGUI woodUI;
     public GameObject woodPlusOneUI;
     public float woodAnimationTime = 0.1f;
     public float woodJumpPower = 0.1f;
@@ -33,6 +35,11 @@ public class TreeScript : MonoBehaviour
 
     public void OnMouseDown()
     {
+        if( improvedWood )
+        {
+            woodUI.text = "+2";
+        }
+        
         initialUIPosition = woodPlusOneUI.transform.localPosition;
         treeManager.inventory.woodCount++;
         if (improvedWood)
