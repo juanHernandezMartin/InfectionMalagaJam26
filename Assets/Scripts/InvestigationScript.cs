@@ -5,6 +5,8 @@ public class InvestigationScript : MonoBehaviour
 {
     public InventoryScript inventory;
     public GameObject investigationModel;
+    public GameObject buildingUI;
+    public GameObject progressUI;
     public UnityEngine.UI.Slider progressSlider;
 
     public int buildPrice = 10;
@@ -21,6 +23,9 @@ public class InvestigationScript : MonoBehaviour
             inventory.woodCount -= buildPrice;
             isBuilt = true;
             investigationModel.SetActive(true);
+            buildingUI.SetActive(false);
+            progressUI.SetActive(true);
+            investigationTimer = investigationTime;
         }
     }
 
