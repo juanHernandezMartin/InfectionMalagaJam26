@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -7,7 +8,7 @@ public class UIManager : MonoBehaviour
     public GameObject startMenu;
 
 
-    void Awake()
+    void Start()
     {
         Time.timeScale = 0;
     }
@@ -17,5 +18,10 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1;
         hud.SetActive(true);
         startMenu.SetActive(false);
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
