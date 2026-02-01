@@ -24,9 +24,9 @@ public class NPCManager : MonoBehaviour
 
     public void SpawnHuman()
     {
-        inventory.healthyCount++;
         if( currentHumans >= maxHumans)
             return;
+        inventory.healthyCount++;
         Vector3 humanPosition = new Vector3(0, 0 ,0);
         GameObject newNPC = Instantiate(humanPrefab, humanPosition, Random.rotation);
         newNPC.transform.parent = transform;

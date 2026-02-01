@@ -52,7 +52,7 @@ public class HumanInfection : MonoBehaviour
         if(currentVirusDuration <= 0)
         {
             isInfected = false;
-            npcManager.currentHumans++;
+            npcManager.inventory.healthyCount++;
             npcManager.inventory.infectedCount--;
             currentVirusDuration = maxVirusDuration;
             humanRenderer.material = healthyMaterial;
