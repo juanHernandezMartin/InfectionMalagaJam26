@@ -15,8 +15,8 @@ public class InventoryScript : MonoBehaviour
 
     public void Update()
     {
-        infectedText.text = "Infected: " + infectedCount;
-        healthyText.text = "Healthy: " + healthyCount;
+        infectedText.text = infectedCount.ToString();
+        healthyText.text = healthyCount.ToString();
         woodText.text = woodCount.ToString();
         maskText.text = maskCount.ToString();
     }
