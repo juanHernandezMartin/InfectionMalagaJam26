@@ -45,6 +45,7 @@ public class HumanInfection : MonoBehaviour
         {
             npcManager.currentHumans--;
             npcManager.inventory.infectedCount--;
+            npcManager.inventory.healthyCount--;
             Destroy(gameObject);
         }
 
@@ -53,7 +54,7 @@ public class HumanInfection : MonoBehaviour
             isInfected = false;
             npcManager.currentHumans++;
             npcManager.inventory.infectedCount--;
-            currentHealth = maxHealth;
+            currentVirusDuration = maxVirusDuration;
             humanRenderer.material = healthyMaterial;
         }
 

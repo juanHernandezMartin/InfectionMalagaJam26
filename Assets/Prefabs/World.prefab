@@ -208,7 +208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::treeManager
   inventory: {fileID: 0}
   treePrefab: {fileID: 8539458627565621529, guid: ba95c8ddb3ce3c04abdd9888bbfb542f, type: 3}
-  timeToSpawn: 3
+  timeToSpawn: 2
   startingTrees: 4
   maxTrees: 15
   currentTrees: 0
@@ -596,7 +596,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6931761087023038760, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: productionTime
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 401968090633871555, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: m_IsActive
@@ -894,7 +894,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6931761087023038760, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: productionTime
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2555560516694117550, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: m_text
@@ -1070,7 +1070,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6931761087023038760, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: productionTime
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2555560516694117550, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: m_text

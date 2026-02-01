@@ -222,11 +222,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HumanInfection
   infectedMaterial: {fileID: 2100000, guid: 81068a0e210a7c24ab4fbe8b5bc91fee, type: 2}
   humanRenderer: {fileID: 1544910785922612723}
-  maskDuration: 10
+  maskDuration: 20
   npcManager: {fileID: 0}
   maskObject: {fileID: 5083223586603404419}
   isInfected: 0
-  healthDuration: 20
+  maxHealth: 60
+  maxVirusDuration: 20
+  currentVirusDuration: 0
 --- !u!54 &1411508562459418854
 Rigidbody:
   m_ObjectHideFlags: 0
