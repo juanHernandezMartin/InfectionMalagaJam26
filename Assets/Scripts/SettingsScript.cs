@@ -8,4 +8,12 @@ public class SettingsScript : MonoBehaviour
     {
         Application.targetFrameRate = maxFps;
     }
+
+    public void Update()
+    {
+        if( Input.GetKeyDown( KeyCode.Escape ) )
+        {
+            Application.Quit();
+        }
+    }
 }
