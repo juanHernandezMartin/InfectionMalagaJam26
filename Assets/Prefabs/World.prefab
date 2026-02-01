@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCManager
   inventory: {fileID: 0}
   humanPrefab: {fileID: 6335863531070037829, guid: c8788f6a16b7c4a42b6161abec2c814e, type: 3}
-  timeToSpawn: 30
+  timeToSpawn: 10
   StartingHumans: 3
   maxHumans: 10
   currentHumans: 0
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::treeManager
   inventory: {fileID: 0}
   treePrefab: {fileID: 8539458627565621529, guid: ba95c8ddb3ce3c04abdd9888bbfb542f, type: 3}
-  timeToSpawn: 3
+  timeToSpawn: 2
   startingTrees: 4
   maxTrees: 15
   currentTrees: 0
@@ -314,7 +314,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::VirusManager
   virusPrefab: {fileID: 820544728573462140, guid: ba99f323688bff84a8e74dcef381f981, type: 3}
   timeToSpawn: 5
-  currentVirus: 0
+  npcManager: {fileID: 5509628248328153862}
+  currentAmountOfVirus: 0
 --- !u!1 &6994573731709251232
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,7 +596,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6931761087023038760, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: productionTime
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 401968090633871555, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: m_IsActive
@@ -893,7 +894,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6931761087023038760, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: productionTime
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2555560516694117550, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: m_text
@@ -1069,7 +1070,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6931761087023038760, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: productionTime
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2555560516694117550, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: m_text
