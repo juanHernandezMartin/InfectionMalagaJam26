@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
+
 
 public class InvestigationScript : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class InvestigationScript : MonoBehaviour
     public GameObject buildingUI;
     public GameObject progressUI;
     public UnityEngine.UI.Slider progressSlider;
+    public GameObject percentage;
 
     public int buildPrice = 10;
 
@@ -16,6 +19,7 @@ public class InvestigationScript : MonoBehaviour
     public float investigationTimer = 0.0f;
 
     private bool isBuilt = false;
+    private float per;
 
     public void OnMouseDown()
     {
@@ -27,6 +31,8 @@ public class InvestigationScript : MonoBehaviour
             buildingUI.SetActive(false);
             progressUI.SetActive(true);
             investigationTimer = investigationTime;
+            percentage.SetActive(true);
+
         }
     }
 
@@ -35,6 +41,8 @@ public class InvestigationScript : MonoBehaviour
         if (investigationTimer > 0)
         {
             progressSlider.value = 1 - (investigationTimer / investigationTime);
+            per = progressSlider.value * 100;
+            percentage.GetComponent<TextMeshProUGUI>().text = per.ToString("0.0") + "%";
             investigationTimer -= Time.deltaTime;
             if (investigationTimer <= 0)
             {

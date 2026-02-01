@@ -13,7 +13,7 @@ public class FactoryScript : MonoBehaviour
     public int maskPrice = 5;
     public int buildPrice = 30;
     public float productionTime = 10.0f;
-    public float productionTimer = 0.0f;
+    public float currentProgress = 0.0f;
     [SerializeField]
     private bool isBuilt = false;
     private UnityEngine.UI.Slider productionSlider;
@@ -44,13 +44,13 @@ public class FactoryScript : MonoBehaviour
             return;
         }
 
-        if ( productionTimer <= 0 )
+        if ( currentProgress <= 0 )
         {
             inventory.woodCount-=maskPrice;
             factoryAnimation.StartClickAnimation();
             factoryUI.slider.SetActive(true);
             factoryUI.exangeSign.SetActive(false);
-            productionTimer = productionTime;
+            currentProgress = productionTime;
         }
     }
 
@@ -70,11 +70,11 @@ public class FactoryScript : MonoBehaviour
 
     private void Update()
     {
-        if (productionTimer > 0)
+        if (currentProgress > 0)
         {
-            productionSlider.value = 1 - (productionTimer / productionTime);
-            productionTimer -= Time.deltaTime;
-            if (productionTimer <= 0)
+            productionSlider.value = 1 - (currentProgress / productionTime);
+            currentProgress -= Time.deltaTime;
+            if (currentProgress <= 0)
             {
                 inventory.maskCount+=3;
                 factoryUI.slider.SetActive(false);
@@ -82,5 +82,4 @@ public class FactoryScript : MonoBehaviour
             }
         }
     }
-
 }
