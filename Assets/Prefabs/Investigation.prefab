@@ -2287,8 +2287,8 @@ MonoBehaviour:
   buildingUI: {fileID: 6685222197975482048}
   progressUI: {fileID: 7008658112523138935}
   progressSlider: {fileID: 4458136509496494631}
-  buildPrice: 20
-  investigationTime: 20
+  buildPrice: 200
+  investigationTime: 40
   investigationTimer: 0
 --- !u!65 &3165885600727134932
 BoxCollider:
