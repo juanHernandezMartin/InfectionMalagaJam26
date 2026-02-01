@@ -10,7 +10,7 @@ public class HumanInfection : MonoBehaviour
     public NPCManager npcManager;
     public GameObject maskObject;
     
-    private bool isInfected = false;
+    public bool isInfected = false;
     private bool isMasked = false;
     private float maskDurationTimer = 0f;
 
@@ -57,6 +57,7 @@ public class HumanInfection : MonoBehaviour
             return;
         isMasked = true;
         maskDurationTimer = maskDuration;
+        npcManager.inventory.maskCount--;
         maskObject.SetActive(true);
     }
 
@@ -66,8 +67,8 @@ public class HumanInfection : MonoBehaviour
         {
             if( isMasked )
                 return;
-            npcManager.inventory.healthyCount--;
-            npcManager.inventory.infectedCount++;
+            //npcManager.inventory.healthyCount--;
+            //npcManager.inventory.infectedCount++;
             other.GetComponent<HumanInfection>().Infect();
         }
     }

@@ -749,6 +749,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2555560516694117550, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
+      propertyPath: m_text
+      value: x10
+      objectReference: {fileID: 0}
     - target: {fileID: 4980208457383863318, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.055
@@ -812,6 +816,10 @@ PrefabInstance:
     - target: {fileID: 7236104475800691302, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211299572767754066, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
+      propertyPath: m_text
+      value: x0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -921,6 +929,10 @@ PrefabInstance:
       propertyPath: productionTime
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 2555560516694117550, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
+      propertyPath: m_text
+      value: x10
+      objectReference: {fileID: 0}
     - target: {fileID: 4980208457383863318, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.129
@@ -988,6 +1000,14 @@ PrefabInstance:
     - target: {fileID: 8211299572767754066, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: m_text
       value: x100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211299572767754066, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
+      propertyPath: m_margin.x
+      value: -8.236465
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211299572767754066, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
+      propertyPath: m_margin.z
+      value: -14.064404
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1084,6 +1104,10 @@ PrefabInstance:
     - target: {fileID: -6931761087023038760, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: productionTime
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2555560516694117550, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
+      propertyPath: m_text
+      value: x10
       objectReference: {fileID: 0}
     - target: {fileID: 4980208457383863318, guid: f6893306a7038f2458e8b01fee902aa3, type: 3}
       propertyPath: m_LocalPosition.x

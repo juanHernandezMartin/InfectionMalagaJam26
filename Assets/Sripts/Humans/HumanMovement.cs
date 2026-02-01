@@ -8,6 +8,9 @@ public class HumanMovement : MonoBehaviour
 
     public float raycastDistance = 0.2f;
     public Transform raycastOrigin;
+
+    public float infectionBoost = 0;
+    public HumanInfection humanInfectionScript;
     
 
     public void Start()
@@ -19,7 +22,15 @@ public class HumanMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(Vector3.right, rotationSpeed * Time.deltaTime);
+        transform.Rotate(Vector3.right, (rotationSpeed + infectionBoost) * Time.deltaTime);
+        if (humanInfectionScript.isInfected)
+        {
+            infectionBoost = 10;
+        }
+        else
+        {
+            infectionBoost = 0;
+        }
     }
 
     public void ChangeDirection()

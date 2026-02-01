@@ -206,6 +206,8 @@ MonoBehaviour:
   directionChangeAmount: 30
   raycastDistance: 0.1
   raycastOrigin: {fileID: 7836660489009981000}
+  infectionBoost: 0
+  humanInfectionScript: {fileID: 3417128947412063391}
 --- !u!114 &3417128947412063391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,6 +225,7 @@ MonoBehaviour:
   maskDuration: 10
   npcManager: {fileID: 0}
   maskObject: {fileID: 5083223586603404419}
+  isInfected: 0
   healthDuration: 20
 --- !u!54 &1411508562459418854
 Rigidbody:
