@@ -27,7 +27,7 @@ public class treeManager : MonoBehaviour
 
     void Update()
     {
-        maxTrees = initialMaxTrees + inventory.healthyCount;
+        maxTrees = initialMaxTrees + (inventory.healthyCount/2);
         if(inventory.healthyCount >= 8 && !improvedWood)
         {
             ShowImprovingButton();
