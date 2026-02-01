@@ -16,7 +16,7 @@ public class FactoryImprovement : MonoBehaviour
         Debug.Log("Improving factories!");
         foreach( FactoryScript factory in factoriesToImprove )
         {
-            factory.productionTime = 5f;
+            factory.productionTime = 3f;
         }
 
         Destroy(gameObject);
