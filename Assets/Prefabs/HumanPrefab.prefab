@@ -220,7 +220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HumanInfection
   infectedMaterial: {fileID: 2100000, guid: 81068a0e210a7c24ab4fbe8b5bc91fee, type: 2}
   humanRenderer: {fileID: 1544910785922612723}
-  maskDuration: 15
+  maskDuration: 10
   npcManager: {fileID: 0}
   maskObject: {fileID: 5083223586603404419}
   healthDuration: 20

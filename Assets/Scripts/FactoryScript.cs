@@ -8,16 +8,20 @@ public class FactoryScript : MonoBehaviour
     public GameObject factoryModel;
     public GameObject factoryParticles;
     public int maskPrice = 5;
-    public int buildPrice = 10;
-    public float productionTime = 2.0f;
+    public int buildPrice = 30;
+    public float productionTime = 10.0f;
     public float productionTimer = 0.0f;
-
+    [SerializeField]
     private bool isBuilt = false;
     private UnityEngine.UI.Slider productionSlider;
 
     public void Start()
     {
         productionSlider = factoryUI.slider.GetComponent<UnityEngine.UI.Slider>();
+        if(isBuilt)
+        {
+            UnlockFactory(true);
+        }
     }
 
     public void OnMouseDown()
@@ -26,13 +30,7 @@ public class FactoryScript : MonoBehaviour
         {
             if (inventory.woodCount >= buildPrice)
             {
-                inventory.woodCount -= buildPrice;
-                isBuilt = true;
-                factoryModel.SetActive(true);
-                factoryParticles.SetActive(true);
-                factoryAnimation.StartClickAnimation();
-                factoryUI.exangeSign.SetActive(true);
-                factoryUI.buildinSign.SetActive(false);
+                UnlockFactory();
             }
             return;
         }
@@ -42,10 +40,23 @@ public class FactoryScript : MonoBehaviour
             inventory.woodCount-=maskPrice;
             factoryAnimation.StartClickAnimation();
             factoryUI.slider.SetActive(true);
-            factoryUI.background.SetActive(false);
             factoryUI.exangeSign.SetActive(false);
             productionTimer = productionTime;
         }
+    }
+
+    public void UnlockFactory(bool isFree = false)
+    {
+        if(!isFree)
+        {
+            inventory.woodCount -= buildPrice;
+        }
+        isBuilt = true;
+        factoryModel.SetActive(true);
+        factoryParticles.SetActive(true);
+        factoryAnimation.StartClickAnimation();
+        factoryUI.exangeSign.SetActive(true);
+        factoryUI.buildinSign.SetActive(false);
     }
 
     private void Update()
@@ -57,7 +68,6 @@ public class FactoryScript : MonoBehaviour
             if (productionTimer <= 0)
             {
                 inventory.maskCount++;
-                factoryUI.background.SetActive(true);
                 factoryUI.slider.SetActive(false);
                 factoryUI.exangeSign.SetActive(true);
             }

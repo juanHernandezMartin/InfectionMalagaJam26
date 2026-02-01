@@ -8,6 +8,7 @@ public class treeManager : MonoBehaviour
     public float timeToSpawn = 1.0f;
     public int startingTrees = 4;
     public int maxTrees = 20;
+    private int initialMaxTrees;
 
     [HideInInspector]
     public int currentTrees = 0;
@@ -18,7 +19,13 @@ public class treeManager : MonoBehaviour
         {
             SpawnTrees();
         }
+        initialMaxTrees = maxTrees;
         InvokeRepeating(nameof(SpawnTrees), timeToSpawn, timeToSpawn);
+    }
+
+    void Update()
+    {
+        maxTrees = initialMaxTrees + inventory.healthyCount;
     }
 
     public void SpawnTrees()
